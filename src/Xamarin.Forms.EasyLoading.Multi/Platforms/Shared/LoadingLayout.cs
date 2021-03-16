@@ -108,7 +108,7 @@ namespace Xamarin.Forms.EasyLoading
         DataTemplate _loadingTemplate;
         int _repeatCount;
         private bool _layoutIsGrid = false;
-        DataTemplateSelector _loadingTemplateSelector; // TODO: Figure out if a selector makes sense...
+        DataTemplateSelector _loadingTemplateSelector;
 
         private IList<View> _originalContent;
 
@@ -179,8 +179,9 @@ namespace Xamarin.Forms.EasyLoading
                 layout.Children.Add(new StackLayout());
                 _layoutIsGrid = true;
             }
-            for (int i = 0; i < _repeatCount; i++)
+            for (int i = 0; i =< _repeatCount; i++)
             {
+                
                 if (_layoutIsGrid)
                 {
                     if (layout.Children[0] is StackLayout stack)
